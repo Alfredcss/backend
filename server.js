@@ -5,7 +5,10 @@ const bodyParser = require("body-parser");
 const createError = require("http-errors");
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/freestyle")
+  //.connect("mongodb://127.0.0.1:27017/freestyle")
+  .connect(
+    "mongodb+srv://alfredofeti22:YWchsFPwmweaFBPo@freestyle.483nesl.mongodb.net/?retryWrites=true&w=majority&appName=freestyle"
+  )
   .then((x) => {
     console.log(`Conectado exitosamente a la BD: "${x.connections[0].name}"`);
   })
